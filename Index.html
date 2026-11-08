@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pifagor Trade | NUPL Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --neon: #00FF41;
+            --text-main: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --panel-bg: rgba(20, 20, 20, 0.8);
+        }
+        body {
+            margin: 0; padding: 0; background-color: var(--bg); color: var(--text-main);
+            font-family: 'Inter', sans-serif; overflow-x: hidden;
+            background-image: radial-gradient(circle at 15% 50%, rgba(0, 255, 65, 0.04) 0%, transparent 50%),
+                              radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+        }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        .logo-top {
+            font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.2rem;
+            color: transparent; -webkit-text-stroke: 1px var(--neon); letter-spacing: 2px;
+            display: flex; align-items: center; gap: 10px; margin-bottom: 50px;
+        }
+        .logo-top span { font-family: 'Caveat', cursive; font-size: 1.8rem; color: var(--text-main); -webkit-text-stroke: 0; }
+
+        .header-title { text-align: center; margin-bottom: 60px; }
+        h1 {
+            font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 900; margin-bottom: 10px;
+            color: transparent; -webkit-text-stroke: 1.5px var(--neon); text-transform: uppercase; line-height: 1.1;
+        }
+        .subtitle { font-family: 'Caveat', cursive; font-size: 2rem; color: var(--text-main); opacity: 0.9; }
+
+        .block { margin-bottom: 80px; }
+        .block-title { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--neon); margin-bottom: 20px; }
+        .text-block p { font-size: 1.1rem; line-height: 1.7; color: #d1d1d1; margin-bottom: 15px; }
+        .text-block strong { color: var(--text-main); font-weight: 600; }
+        
+        .img-container {
+            width: 100%; margin-top: 20px; background: var(--panel-bg); border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08); padding: 15px; box-sizing: border-box;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .img-container img { width: 100%; height: auto; object-fit: contain; border-radius: 8px; display: block; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .card { background: var(--panel-bg); padding: 20px; border-radius: 10px; border-left: 4px solid var(--neon); }
+        .card-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 5px; }
+        .card-val { font-family: 'Montserrat', sans-serif; font-weight: 900; color: var(--text-main); font-size: 1.8rem; }
+
+        .highlight-box { background: rgba(0, 255, 65, 0.05); border: 1px solid rgba(0, 255, 65, 0.2); padding: 25px; border-radius: 12px; margin-top: 20px; }
+        .highlight-box strong { color: var(--neon); }
+
+        .footer { text-align: center; margin-top: 60px; font-size: 0.9rem; color: var(--text-muted); border-top: 1px solid #333; padding-top: 20px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; } .subtitle { font-size: 1.5rem; }
+            .block-title { font-size: 1.4rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-top">PIFAGOR TRADE <span>math trade</span></div>
+
+        <div class="header-title">
+            <h1>On-Chain Аналитика</h1>
+            <div class="subtitle">Нереализованный профит и убыток (NUPL)</div>
+            <div style="font-size: 0.9rem; color: #555; margin-top: 20px; letter-spacing: 2px;">СРЕЗ ДАННЫХ: 07.11.2026</div>
+        </div>
+
+        <div class="block">
+            <div class="block-title">1. Цикличность затяжных снижений (High → Low)</div>
+            <div class="text-block">
+                <p>Снижение от *High* (31 января 2025) до Low (18 августа 2026) заняло <strong>564 дня</strong>. Временные рамки (норма): <strong>[ 423 - 631 ] день</strong>.</p>
+                <p>Ожидаемый диапазон завершения: [30 марта - 24 октября 2026]. Снижение приостановилось в этих рамках, затем 2.5 месяца роста. Low приобрел ярко-выраженный характер. BTC формирует Low первым, NUPL — позже. Снижение завершено.</p>
+            </div>
+            <div class="img-container"><img src="graph_down.png" alt="График снижения"></div>
+        </div>
+
+        <div class="block">
+            <div class="block-title">2. Цикличность от Low до Low</div>
+            <div class="grid">
+                <div class="card"><div class="card-title">2011 — 2015</div><div class="card-val">1287 <span style="font-size:1rem;color:var(--neon);">дн.</span></div></div>
+                <div class="card"><div class="card-title">2015 — 2019</div><div class="card-val">1344 <span style="font-size:1rem;color:var(--neon);">дн.</span></div></div>
+                <div class="card"><div class="card-title">2019 — 2023</div><div class="card-val">1421 <span style="font-size:1rem;color:var(--neon);">дн.</span></div></div>
+                <div class="card" style="border-left-color: #FF4B4B;"><div class="card-title" style="color:#fff;">2023 — 2026</div><div class="card-val" style="color:#FF4B4B;">1318 <span style="font-size:1rem;">дн.</span></div></div>
+            </div>
+            <div class="text-block" style="margin-top: 20px;">
+                <p>Ожидаемый диапазон: [18 июля - 29 ноября 2026]. Low сформирован 18 августа 2026. Движение заняло 1318 дней (в норме). Запас времени 23 дня. Показатель закрепился выше 0.25. Вывод: Low 2026 истинный.</p>
+            </div>
+            <div class="img-container"><img src="graph_low.png" alt="График Low-Low"></div>
+        </div>
+
+        <div class="block">
+            <div class="block-title">3. Моделирование и Таргет</div>
+            <div class="text-block">
+                <p>17 сентября 2026 года показатель закрепился выше <strong>0.25</strong>. Переход из "Страха" в "Оптимизм".</p>
+                <p>Цель: уровень <strong>0.6</strong> (красная зона).</p>
+            </div>
+            <div class="img-container"><img src="graph_model.png" alt="График Моделирования"></div>
+        </div>
+
+        <div class="block">
+            <div class="block-title">4. Статистика High</div>
+            <div class="highlight-box">
+                <p>Преодоление уровня 0.6 будет указывать на:</p>
+                <ul>
+                    <li>Высокий уровень нереализованной прибыли.</li>
+                    <li>Давление на цену со стороны продаж.</li>
+                    <li>Переход в стадию "Веры" (кульминационная фаза роста).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="block-title">5. Текущая ситуация (WE HERE)</div>
+            <div class="text-block">
+                <p>Показатель закрепился выше 0.25. Переход в стадию "Оптимизма". Смена тренда в пользу восходящей тенденции.</p>
+            </div>
+            <div class="img-container"><img src="graph_current.png" alt="График текущей ситуации"></div>
+        </div>
+
+        <div class="footer">
+            &copy; Pifagor Trade. All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>
